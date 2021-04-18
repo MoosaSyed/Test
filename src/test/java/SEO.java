@@ -5,19 +5,20 @@ import org.openqa.selenium.devtools.Command;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.Log;
 import org.openqa.selenium.devtools.network.Network;
+import org.testng.annotations.Test;
 
 import java.util.Optional;
 
 public class SEO {
 
-    public static void main(String[] args) throws InterruptedException {
-//        System.out.println();
+//    public static void main(String[] args) throws InterruptedException {
+////        System.out.println();
+//
+//        consoleLogs();
+////        getstatus();
+//    }
 
-        consoleLogs();
-//        getstatus();
-    }
-
-
+    @Test
     public static void consoleLogs() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\IntelliJ\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -43,7 +44,7 @@ public class SEO {
         });
 
     }
-
+    @Test
     public static void getstatus()
     {
         System.setProperty("webdriver.chrome.driver", "D:\\IntelliJ\\drivers\\chromedriver.exe");
