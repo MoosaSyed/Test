@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Test1 {
@@ -13,6 +14,12 @@ public class Test1 {
 //        WebDriver driver = new ChromeDriver();
 
             WebDriver driver = new ChromeDriver();
+            driver.get("https://www.google.com/");
+            driver.manage().window().maximize();
+            String url = driver.getTitle();
+        Assert.assertEquals(url,url);
+        System.out.println("Title of the Page : " + url);
+        driver.quit();
     }
 
 
